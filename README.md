@@ -4,22 +4,22 @@
 
 ### 1. 자동차 이름 입력 및 Car 객체 생성
 
-- "경주할 자동차 이름을 입력하세요. (이름은 쉼표(,) 기준으로 구분)" 문구 출력
+- "경주할 자동차 이름을 입력하세요. (이름은 쉼표(,) 기준으로 구분)" 문구 출력 
 
 
-- 사용자로부터 자동차 이름들을 쉼표(,) 기준으로 입력 받기
+- 사용자로부터 자동차 이름들을 쉼표(,) 기준으로 입력 받기 
 
 
-- Car 클래스 생성 (private 필드: name, position)
+- Car 클래스 생성 (private 필드: name, position) 
 
 
-- Car 생성 시, 이름이 5자 이하인지 검증 (초과 시 IllegalArgumentException)
+- Car 생성 시, 이름이 5자 이하인지 검증 (초과 시 IllegalArgumentException) 
 
 
-- Car 생성 시, 이름이 공백이 아닌지 검증 (공백 시 IllegalArgumentException)
+- Car 생성 시, 이름이 공백이 아닌지 검증 (공백 시 IllegalArgumentException) 
 
 
-- 입력받은 이름들로 List<Car> 객체 리스트 생성 및 반환
+- 입력받은 이름들로 List<Car> 객체 리스트 생성 및 반환 
 
 
 
