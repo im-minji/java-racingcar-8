@@ -16,6 +16,11 @@ public class Application {
             racingResult(racingCars);
             System.out.println(" ");
         }
+
+        WinnerFinder winnerFinder = new WinnerFinder(racingCars);
+        winnerFinder.findMaxScore();
+        winnerFinder.findWinner();
+        System.out.println("최종 우승자 : " + String.join(", ", winnerFinder.getWinners()));
     }
 
     static String inputConsole() {

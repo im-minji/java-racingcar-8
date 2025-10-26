@@ -1,5 +1,7 @@
 package racingcar;
 
+import java.util.List;
+
 public class Car {
     private final String name;
     private int positions;
@@ -29,6 +31,17 @@ public class Car {
             System.out.print("-");
         }
         System.out.println(" ");
+    }
+
+    public int maxScore(int currentMaxScore) {
+        currentMaxScore = Math.max(this.positions, currentMaxScore);
+        return currentMaxScore;
+    }
+
+    public void addNameToListIfWinner(int maxScore, List<String> winnerList) {
+        if(this.positions == maxScore) {
+            winnerList.add(this.name);
+        }
     }
 
 }
