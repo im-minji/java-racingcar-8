@@ -16,4 +16,19 @@ public class Car {
             throw new IllegalArgumentException("이름을 정확하게 입력해주세요.");
         }
     }
+
+    public void move(int randomNumber) {
+        if(randomNumber >= 4) {
+            this.positions++;
+        }
+    }
+
+    public void printResult() {
+        System.out.print(this.name + " : ");
+        for(int k =0; k<this.positions; k++) {
+            System.out.print("-");
+        }
+        System.out.println(" ");
+    }
+
 }

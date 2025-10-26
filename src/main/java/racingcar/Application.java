@@ -1,6 +1,7 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
+import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,11 @@ public class Application {
         List<Car> racingCars = createCarList(carNames);
 
         int tryCount = tryCountConsole();
+
+        for(int i = 0; i < tryCount; i++) {
+            racingResult(racingCars);
+            System.out.println(" ");
+        }
     }
 
     static String inputConsole() {
@@ -46,6 +52,18 @@ public class Application {
     static void tryCountIfNegative(int tryCount) {
         if (tryCount <= 0) {
             throw new IllegalArgumentException("횟수는 양수여야 합니다.");
+        }
+    }
+
+    static void racingResult(List<Car> racingCars) {
+        for(int j = 0; j < racingCars.size(); j++) {
+            // 전진하는 조건은 0~9 사이의 무작위 값을 구한 후 무작위 값이 4 이상일 경우 전진한다 4 미만이면 스탑
+            int randomNumber = Randoms.pickNumberInRange(0, 9);
+            Car currentCar = racingCars.get(j);
+            currentCar.move(randomNumber);
+
+            currentCar.printResult();
+
         }
     }
 }
