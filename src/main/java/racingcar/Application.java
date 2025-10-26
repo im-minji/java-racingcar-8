@@ -8,6 +8,8 @@ public class Application {
     public static void main(String[] args) {
         String carNames = inputConsole();
         List<Car> racingCars = createCarList(carNames);
+
+        int tryCount = tryCountConsole();
     }
 
     static String inputConsole() {
@@ -25,5 +27,25 @@ public class Application {
             racingCars.add(car);
         }
         return racingCars;
+    }
+
+    static int tryCountConsole() {
+        System.out.println("시도할 횟수는 몇 회인가요?");
+        int tryCount;
+
+        try {
+            tryCount = Integer.parseInt(Console.readLine());
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("횟수(0 이상의 숫자)를 입력해주세요.");
+        }
+
+        tryCountIfNegative(tryCount);
+        return tryCount;
+    }
+
+    static void tryCountIfNegative(int tryCount) {
+        if (tryCount <= 0) {
+            throw new IllegalArgumentException("횟수는 양수여야 합니다.");
+        }
     }
 }
