@@ -40,12 +40,12 @@ public class RacingController {
         List<Car> cars = new ArrayList<>();
         for (String name : carNames) {
             cars.add(new Car(name.trim()));
-            if (cars.isEmpty() || (cars.size() == 1 && cars.get(0).getName().isEmpty())) {
-                throw new IllegalArgumentException("자동차 이름을 1개 이상 입력해주세요.");
-            }
+        }
+        // 생성된 cars 리스트가 비어있거나, 유일한 요소가 빈 이름인지 확인
+        if (cars.isEmpty() || (cars.size() == 1 && cars.get(0).getName().isEmpty())) {
+            throw new IllegalArgumentException("자동차 이름을 1개 이상 입력해주세요.");
         }
         return cars;
-
     }
 
     private int setupTryCountWithoutRetry() {
