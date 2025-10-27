@@ -17,7 +17,7 @@ public class WinnerFinder {
 
     public void findMaxScore() {
         for (Car currentCar : cars) {
-            // Car에게 "더 큰 점수"를 계산하도록 시킴 (Tell)
+            // Car: 더 큰 점수 계산
             this.maxScore = currentCar.getMaxPosition(maxScore);
         }
     }

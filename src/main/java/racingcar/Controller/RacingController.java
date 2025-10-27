@@ -1,8 +1,8 @@
 package racingcar.Controller;
 
 import camp.nextstep.edu.missionutils.Randoms;
-import racingcar.Model.Car; // Correct import
-import racingcar.Model.WinnerFinder; // Correct import
+import racingcar.Model.Car;
+import racingcar.Model.WinnerFinder;
 import racingcar.View.InputView;
 import racingcar.View.OutputView;
 

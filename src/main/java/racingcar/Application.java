@@ -4,7 +4,6 @@ import racingcar.Controller.RacingController;
 import racingcar.View.InputView;
 import racingcar.View.OutputView;
 
-// 프로그램 시작 지점
 public class Application {
     public static void main(String[] args) {
         InputView inputView = new InputView();

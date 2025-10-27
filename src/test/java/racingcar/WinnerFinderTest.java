@@ -21,24 +21,24 @@ class WinnerFinderTest {
     void setUp() {
         // 공동 우승자 시나리오
         Car pobiCo = new Car("pobi");
-        moveCar(pobiCo, 3); // position 3
+        moveCar(pobiCo, 3);
         Car woniCo = new Car("woni");
-        moveCar(woniCo, 5); // position 5
+        moveCar(woniCo, 5);
         Car junCo = new Car("jun");
-        moveCar(junCo, 5); // position 5
+        moveCar(junCo, 5);
         carsWithCoWinners = Arrays.asList(pobiCo, woniCo, junCo);
 
         // 단독 우승자 시나리오
         Car pobiSingle = new Car("pobi");
-        moveCar(pobiSingle, 7); // position 7
+        moveCar(pobiSingle, 7);
         Car woniSingle = new Car("woni");
-        moveCar(woniSingle, 5); // position 5
+        moveCar(woniSingle, 5);
         Car junSingle = new Car("jun");
-        moveCar(junSingle, 5); // position 5
+        moveCar(junSingle, 5);
         carsWithSingleWinner = Arrays.asList(pobiSingle, woniSingle, junSingle);
     }
 
-    // 테스트를 위한 Car 이동 헬퍼 메서드
+    // 테스트를 위한 Car 이동 메서드
     private void moveCar(Car car, int times) {
         for (int i = 0; i < times; i++) {
             car.move(4); // 무조건 전진하는 숫자(4 이상) 사용
