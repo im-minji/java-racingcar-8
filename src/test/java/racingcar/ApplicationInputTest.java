@@ -1,6 +1,5 @@
 package racingcar;
 
-// NsTest 상속 및 관련 import 추가
 import camp.nextstep.edu.missionutils.test.NsTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

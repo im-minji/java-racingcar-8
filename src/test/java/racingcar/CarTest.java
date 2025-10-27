@@ -1,6 +1,6 @@
 package racingcar;
 
-import racingcar.Model.Car; // 수정된 import 문
+import racingcar.Model.Car;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,6 @@ class CarTest {
     @DisplayName("자동차 이름이 5자를 초과하면 예외 발생")
     void createCar_WithLongNameOver5_ShouldThrowException() {
         String longName = "pobiwoni"; // 6자
-        // Car 생성자가 이름만 받도록 변경되었으므로, 초기 위치(0) 제거
         assertThatThrownBy(() -> new Car(longName))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("5글자 이하여야 합니다.");
